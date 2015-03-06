@@ -1,0 +1,7 @@
+source("PowerFileRead.R")
+png(filename='plot3.png',width=480,height=480,units='px')
+plot(Power.Consumption$Datetime,Power.Consumption$Sub_metering_1,xlab="",ylab="Energy sub metering", col="black",type="l")
+lines(Power.Consumption$Datetime,Power.Consumption$Sub_metering_2,col="red")
+lines(Power.Consumption$Datetime,Power.Consumption$Sub_metering_3,col="blue")
+legend("topright",lty=1,col=c("black","red","blue"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
+dev.off()
